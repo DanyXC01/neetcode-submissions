@@ -1,0 +1,17 @@
+class Solution {
+    /**
+     * @param {number[]}
+     * @return {number[]}
+     */
+    getConcatenation(nums: number[]): number[] {
+        const ans = new Array(nums.length * 2)
+        const n = nums.length
+
+        for (let i = 0; i < n; i++) {
+            ans[i] = nums[i]
+            ans[i + n] = nums[i]
+        }
+
+        return ans
+    }
+}
